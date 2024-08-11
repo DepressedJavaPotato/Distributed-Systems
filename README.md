@@ -21,8 +21,6 @@ This Calculator Server supports the following remote methods:
 ```plaintext
 .
 ├── bin/                  # Directory for compiled class files
-├── lib/                  # Directory for external libraries (JUnit)
-│   └── junit-5.10.3.jar     # JUnit library for testing
 ├── src/                  # Java source files
 │   ├── Calculator.java
 │   ├── CalculatorClient.java

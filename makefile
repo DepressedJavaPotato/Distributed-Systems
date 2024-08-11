@@ -1,18 +1,15 @@
 JAVAC = javac
 JAVA = java
-RMI_REGISTRY = rmiregistry
-
 SRC_DIR = src
 BIN_DIR = bin
 
-SRC_FILES = $(wildcard $(SRC_DIR)/*.java)#Java files
-BIN_FILES = $(SRC_FILES:$(SRC_DIR)/%.java=$(BIN_DIR)/%.class)#Class files
+SRC_FILES = $(wildcard $(SRC_DIR)/*.java)
 
 all: compile
 
 #Compile Java source files
 compile:
-	if not exist $(BIN_DIR) mkdir $(BIN_DIR)
+	@mkdir -p $(BIN_DIR)
 	$(JAVAC) -d $(BIN_DIR) $(SRC_FILES)
 
 #Run RMI Registry
@@ -33,7 +30,7 @@ run-client:
 #Clean build directory
 clean:
 	@echo "Cleaning up..."
-	@rmdir /S /Q $(BIN_DIR)
+	@rm -rf $(BIN_DIR)
 
-#Phony targets
+#Phony targets (for optimizing performance)
 .PHONY: all compile registry run-server run-client clean

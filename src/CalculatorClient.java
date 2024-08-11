@@ -1,4 +1,3 @@
-
 import java.rmi.Naming;
 
 
@@ -7,15 +6,12 @@ public class CalculatorClient {
         try {
             Calculator calculator = (Calculator) Naming.lookup("rmi://localhost/CalculatorService");
 
-            calculator.pushValue(10);
-            calculator.pushValue(20);
-            calculator.pushOperation("min");
-            System.out.println("Min: " + calculator.pop());
             
-            calculator.pushValue(10);
-            calculator.pushValue(20);
-            calculator.pushOperation("max");
-            System.out.println("Max: " + calculator.pop());
+
+            calculator.pushValue(4);
+            calculator.pushValue(6);
+            calculator.pushOperation("lcm");
+            System.out.println("LCM: " + calculator.pop());
 
 
 

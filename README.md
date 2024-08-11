@@ -17,6 +17,7 @@ This Calculator Server supports the following remote methods:
 
 ## Assignment Structure
 
+
 ```plaintext
 .
 ├── bin/                  # Directory for compiled class files
@@ -29,3 +30,20 @@ This Calculator Server supports the following remote methods:
 │   └── CalculatorServer.java
 ├── makefile              # Makefile for building and running the project
 └── README.md             # This readme file
+
+```
+## Setup Instructions
+
+# Prerequisites
+- Java Development Kit (JDK) 
+- Terminal or command prompt
+
+## Compilation of source files
+To compile, just type make in command prompt.
+
+## Running the server
+After compilation of files, run the server by typing in the command "java -cp bin CalculatorServer"
+
+## Running the client
+Once the server is ready, run the client requests by typing "java -cp bin CalculatorClient"
+

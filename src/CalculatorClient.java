@@ -6,10 +6,10 @@ public class CalculatorClient {
         try {
             Calculator calculator = (Calculator) Naming.lookup("rmi://localhost/CalculatorService");
 
-            calculator.pushValue(4);
-            calculator.pushValue(6);
-            calculator.pushOperation("lcm");
-            System.out.println("LCM: " + calculator.pop());
+            calculator.pushValue(5);
+            calculator.pushValue(15);
+            calculator.pushOperation("gcd");
+            System.out.println("GCD: " + calculator.pop());
 
             System.out.println("Is stack empty? " + calculator.isEmpty());
         } catch (Exception e) {

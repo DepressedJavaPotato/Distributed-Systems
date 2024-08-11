@@ -12,10 +12,12 @@ public class CalculatorClient {
             calculator.pushOperation("min");
             System.out.println("Min: " + calculator.pop());
             
-            calculator.pushValue(5);
-            calculator.pushValue(15);
-            calculator.pushOperation("gcd");
-            System.out.println("GCD: " + calculator.pop()); // Should print 5
+            calculator.pushValue(10);
+            calculator.pushValue(20);
+            calculator.pushOperation("max");
+            System.out.println("Max: " + calculator.pop());
+
+
 
 
             System.out.println("Is stack empty? " + calculator.isEmpty());
